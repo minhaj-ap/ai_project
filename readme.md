@@ -34,7 +34,7 @@ All endpoints use the **GET** method and expect plain text in the **body** (not 
 ```bash
 # 1. Clone the repo
 git clone https://github.com/minhaj-ap/ai_project.git
-cd ai-movie-review-api
+cd ai-project
 
 # 2. Create a virtual environment
 python3 -m venv venv
