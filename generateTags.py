@@ -1,8 +1,8 @@
 import spacy
 
 # NOTE:tags shouldn't be one word unless it convey porper meaning
-# Loading the large English pipeline
-nlp = spacy.load("en_core_web_lg")
+# Loading the small English pipeline
+nlp = spacy.load("en_core_web_sm")
 
 
 # used to change verbs to ing format following general language rules
