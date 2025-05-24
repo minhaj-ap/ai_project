@@ -42,4 +42,11 @@ def generateTags(paragraph: str) -> list:
         elif len(chunk.text.strip().lower()) > 1:
             # only adding to tag if the chunk noun is a multi word
             tags.add(chunk.text.strip().lower())
-    return list(tags)
+    final_list = []
+    for tag in tags:
+        doc_tag = nlp(tag)
+        #removing any stop words or punctuations
+        if any(not token.is_stop and not token.is_punct for token in doc_tag):
+            print(tag)
+            final_list.append(tag)
+    return final_list
