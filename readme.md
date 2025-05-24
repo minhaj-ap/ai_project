@@ -19,13 +19,13 @@ Hosted on Render (free tier):
 
 ## 🚀 Endpoints
 
-All endpoints use the **GET** method and expect plain text in the **body** (not as a JSON object). The response type depends on the task.
+All endpoints use the **POST** method and expect JSON object in the **body** . The response type depends on the task.
 
-| Endpoint      | Function                       | Request Body           | Response Type      |
-|---------------|--------------------------------|------------------------|--------------------|
-| `/rate`       | Extracts rating from paragraph | Paragraph text         | `String` (e.g., "4.5/5") |
-| `/tags`       | Generates relevant tags        | Paragraph text         | `Array` of strings |
-| `/summary`    | Summarizes the paragraph       | Paragraph text         | `String` summary   |
+| Endpoint   | Function                       | Request Body                              | Response Type                      |
+| ---------- | ------------------------------ | ----------------------------------------- | ---------------------------------- |
+| `/rate`    | Extracts rating from paragraph | Paragraph text                            | `String` (e.g., "4.5/5")           |
+| `/tags`    | Generates relevant tags        | `{"paragrpah": sentence to generate tag}` | `{tags:[Array of tags as strings]}` |
+| `/summary` | Summarizes the paragraph       | Paragraph text                            | `String` summary                   |
 
 ---
 
@@ -45,14 +45,14 @@ pip install -r requirements.txt
 
 # 4. Run the app
 flask run
-````
+```
 
 ---
 
 ## 🧠 Technologies & NLP Models used so far
 
-* **Flask** for API creation
-
+- **Flask** for API creation
+- **spaCy** for natural language processing
 
 ---
 
@@ -64,9 +64,9 @@ This project is open-source under the [MIT License](LICENSE).
 
 ## ⚠️ Notes
 
-* Hosted on **Render (free tier)** — cold starts may delay responses slightly.
-* A ping service is set up to minimize cold start delays.
-* This is an early-stage project; model performance and accuracy may improve over time.
+- Hosted on **Render (free tier)** — cold starts may delay responses slightly.
+- A ping service is set up to minimize cold start delays.
+- This is an early-stage project; model performance and accuracy may improve over time.
 
 ---
 
@@ -82,8 +82,3 @@ This project is open-source under the [MIT License](LICENSE).
 [Click here to see all contributors](https://github.com/minhaj-ap/ai_project/graphs/contributors)
 
 > Want to contribute? Check out [issues](https://github.com/minhaj-ap/ai_project/issues) or submit a PR!
-
-
-> Want to contribute? start with an issue or PR!
-
----
