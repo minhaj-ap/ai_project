@@ -34,7 +34,7 @@ All endpoints use the **POST** method and expect JSON object in the **body** . T
 ```bash
 # 1. Clone the repo
 git clone https://github.com/minhaj-ap/ai_project.git
-cd ai-movie
+cd ai-project
 
 # 2. Create a virtual environment
 python3 -m venv venv
@@ -82,5 +82,3 @@ This project is open-source under the [MIT License](LICENSE).
 [Click here to see all contributors](https://github.com/minhaj-ap/ai_project/graphs/contributors)
 
 > Want to contribute? Check out [issues](https://github.com/minhaj-ap/ai_project/issues) or submit a PR!
-
----
