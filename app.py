@@ -9,7 +9,7 @@ def home():
     return "Hello, Flask!"
 
 
-@app.route("/rate")
+@app.route("/rate", methods=["POST"])
 # TODO:Find ratings from a given review paragraph
 def findRating():
     return "Find rating from a given paragraph"
@@ -32,7 +32,7 @@ def returnTags():
         return jsonify({"error": "Failed to generate tags"}), 500
 
 
-@app.route("/summary")
+@app.route("/summary",methods=["POST"])
 # TODO:summarize paragraphs
 def summarizeParagrpah():
     return "Summarize a long paragraph into a small one"
