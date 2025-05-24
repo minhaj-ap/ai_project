@@ -25,8 +25,7 @@ def returnTags():
         paragraph = data.get("paragraph")
         if not paragraph:
             return jsonify({"error": "No paragraph argument found"}), 400
-        result = jsonify(generateTags(paragraph))
-        print(result)
+        result = jsonify({"tags": generateTags(paragraph)})
         return result
     except Exception as e:
         print(e)
